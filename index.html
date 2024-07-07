@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/Reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+        />
+        <script src="./js/main.js" defer type="module"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div id="mainDivNav">
+                    <div class="logo">
+                        <img src="./images/Netflix-Logo.png" alt="" />
+                    </div>
+                    <div class="options">
+                        <ul>
+                            <li><a href="">TV Shows</a></li>
+                            <li><a href="">Movies</a></li>
+                            <li><a href="">Recently Added</a></li>
+                            <li><a href="">My List</a></li>
+                            <li><a href="" id="favorites">Favorites</a>
+                                <ul id="favmovies_ul">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search" id="search">
+                        <div class="searchIcon" id="searchIcon">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <form>
+                            <input type="text" id="search" />
+                            <input type="submit" id="submitNav" />
+                        </form>
+                        <div id="searchResult" class="searchResult"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header id="header">
+            <div class="mainHeader">
+                <div class="series">
+                    <div>
+                        <img
+                            src="./images/vecteezy_netflix-transparente-png-netflix-livre-png_19956195.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h2>SERIES</h2>
+                    </div>
+                </div>
+                <div id="info">
+                    <div id="infoHeaderDiv">
+                        <span></span>
+                        <h2 id="infoTitle"></h2>
+                        <p id="infoOverview"></p>
+                        <strong id="movieRate"> </strong>
+                        <strong id="movieYear"> </strong>
+                        <a href="" id="watchVideo">
+                            <i class="bi bi-caret-right-fill"></i> Watch Now</a
+                        >
+                        <a href="" id="add_to_watchlist">Add to watchList</a>
+                    </div>
+                    <div class="video__wrapper" id="video__wrapper">
+                        <iframe
+                            title="Donny Hathaway — A Song For You (LYRICS)"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+                <h2 class="trending">Trending Now</h2>
+                <div id="moviesMain">
+                    <div id="leftArrow">
+                        <i class="bi bi-arrow-left left"></i>
+                    </div>
+                    <div id="watchList"></div>
+                    <div id="rightArrow">
+                        <i class="bi bi-arrow-right right"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="sect2">
+            <div class="container">
+                <div id="series_div_main_parent"></div>
+            </div>
+        </section>
+    </body>
+</html>

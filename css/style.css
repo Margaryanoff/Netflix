@@ -1,0 +1,393 @@
+@import url(./Reset.css);
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url(../fonts/Fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins Light";
+    src: url(../fonts/Fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: "Poppins ExtraLight";
+    src: url(../fonts/Fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+body {
+    font-family: "Poppins Light";
+}
+nav {
+    background: transparent;
+    .searchResult{
+        display: none;
+        height: 600px;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin-top: 20px;
+        position: absolute;
+        background-color: rgba(255, 0, 0, 0.539);
+        width: 500px;
+        transition: .3s;
+        z-index: 99;
+        .search_div{
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 20px;
+            align-items: center;
+            display: flex;
+            transition: .3s;
+            &:hover{
+                background: red;
+                transition: .3s;
+                cursor: pointer;
+            }
+            .search_left_div{
+                width: 20%;
+                img{
+                    display: block;
+                }
+            }
+            .search_right_div{
+                text-align: right;
+                flex-grow: 1;
+            }
+        }
+    }
+    #mainDivNav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        .logo {
+            width: 10%;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                scale: 1.1;
+                transition: 0.3s;
+            }
+        }
+        .options {
+            flex-grow: 1;
+            ul {
+                display: flex;
+                gap: 30px;
+                li {
+                    overflow: hidden;
+                    position: relative;
+                    transition: 0.3s;
+                    padding: 5px 0;
+                    &:hover {
+                        scale: 1.04;
+                        transition: 0.3s;
+                    }
+                    &:hover a::before {
+                        transform: translateX(0);
+                    }
+                }
+                a {
+                    color: white;
+                    font-size: 19px;
+                    transition: 0.3s;
+                    padding-bottom: 5px;
+                    display: inline-block;
+                    &::before {
+                        content: "";
+                        color: red;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        border-bottom: 2px solid;
+                        bottom: 0;
+                        transform: translateX(-100%);
+                        transition: 0.3s;
+                    }
+                    &:hover {
+                        transition: 0.3s;
+                        color: red;
+                    }
+                }
+            }
+        }
+        .search {
+            position: relative;
+            .searchIcon {
+                color: white;
+                font-size: 30px;
+                transition: 0.3s;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    transition: 0.3s;
+                    color: red;
+                }
+            }
+            form {
+                display: none;
+                transform-origin: center;
+                scale: 1;
+                transition: .4s;
+                #search {
+                    padding: 5px 3px;
+                    min-width: 200px;
+                }
+                #submitNav {
+                    padding: 5px 0;
+                    background: transparent;
+                    color: white;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        transition: 0.3s;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+header {
+    margin: -96px 0;
+    padding-top: 110px;
+    background: url(../images/0af6ce3e-b27a-4722-a5f0-e32af4df3045_what_is_netflix_5_en.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .trending {
+        color: white;
+        text-align: center;
+        user-select: none;
+        background: rgba(0, 0, 0, 0.598);
+        padding: 10px 0;
+        width: 20%;
+        transition: 0.3s;
+        margin: 50px auto;
+        &:hover {
+            background: rgba(0, 0, 0, 0.762);
+            color: red;
+            transition: 0.3s;
+        }
+    }
+    .series {
+        user-select: none;
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: flex-start;
+        div {
+            width: 10%;
+            h2 {
+                font-size: 40px;
+                margin-left: -30px;
+                letter-spacing: 10px;
+                font-family: "Poppins ExtraLight";
+            }
+        }
+    }
+    #info {
+        color: white;
+        padding: 0 70px;
+        position: relative;
+        display: flex;
+        .video__wrapper {
+            border: 5px solid red;
+            width: 50%;
+            z-index: 1;
+            transition: .5s;
+            transform: translateX(-100%);
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.384);
+            inset: 0;
+            z-index: -1;
+        }
+        .video__wraper {
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        #infoHeaderDiv {
+            transition: 0.5s;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            padding: 50px;
+            width: 60%;
+            aspect-ratio: 2/1;
+            z-index: 9;
+            user-select: none;
+            h2 {
+                font-size: 50px;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            }
+            p {
+                width: 60%;
+                margin: 40px 0;
+            }
+            a {
+                color: red;
+                border: 1px solid;
+                display: inline-block;
+                margin: 40px 0;
+                padding: 5px 30px;
+                background: rgba(0, 0, 0, 0.387);
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background: rgba(0, 0, 0, 0.687);
+                    transition: 0.3s;
+                }
+            }
+            strong {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    }
+    #watchList {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+        position: relative;
+        width: 88%;
+        margin: 30px auto;
+        div {
+            width: 10%;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: 0.3s;
+            overflow: hidden;
+            img {
+                transition: 0.3s;
+            }
+            &:hover img {
+                scale: 1.1;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+#moviesMain {
+    position: relative;
+    #leftArrow {
+        color: white;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        height: 100%;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+        background: rgba(0, 0, 0, 0.374);
+        i {
+            padding: 15px;
+            font-size: 30px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        &:hover {
+            border: 1px solid white;
+            transition: 0.3s;
+            background: rgba(0, 0, 0, 0.638);
+        }
+        &:hover i {
+            scale: 1.2;
+            color: red;
+            transition: 0.3s;
+        }
+    }
+    #rightArrow {
+        color: white;
+        position: absolute;
+        right: 0;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        cursor: pointer;
+        height: 100%;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+        background: rgba(0, 0, 0, 0.374);
+        i {
+            padding: 15px;
+            font-size: 30px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        &:hover {
+            border: 1px solid white;
+            background: rgba(0, 0, 0, 0.638);
+            transition: 0.3s;
+        }
+        &:hover i {
+            scale: 1.2;
+            color: red;
+            transition: 0.3s;
+        }
+    }
+}
+.sect2 {
+    background-image: url(../images/0af6ce3e-b27a-4722-a5f0-e32af4df3045_what_is_netflix_5_en.png);
+    background-position: center;
+}
+
+.hide{
+    display: none;
+}
+#series_div_main_parent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 120px 0;
+    .seriesDivMain {
+        position: relative;
+        width: 48%;
+        aspect-ratio: 1/1;
+        border: 2px solid white;
+        display: flex;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        p {
+            color: white;
+        }
+        .seriesSpan {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.487);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+    }
+}
