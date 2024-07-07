@@ -3,7 +3,6 @@ import createCards from "./createData.js";
 import { headerDrawing } from "./createData.js";
 import { createSeries } from "./createData.js";
 import { createSearch } from "./createData.js";
-
 const searchIcon = document.getElementById("searchIcon");
 const form = document.forms[0];
 const watchList = document.getElementById("watchList");
